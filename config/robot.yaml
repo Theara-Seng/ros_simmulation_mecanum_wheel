@@ -1,0 +1,8 @@
+# gazebo_rohs_control_params.yaml
+gazebo_ros_control/pid_gains:
+  summit_front_left_wheel_joint: {p: 1.0, i: 0.0, d: 1.0}
+  summit_front_right_wheel_joint: {p: 1.0, i: 0.0, d: 1.0}
+  summit_back_right_wheel_joint: {p: 1.0, i: 0.0, d: 1.0}
+  summit_back_left_wheel_joint: {p: 1.0, i: 0.0, d: 1.0}
+
+ 

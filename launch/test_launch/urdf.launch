@@ -1,0 +1,14 @@
+<launch>
+     <arg name="model" />
+     <arg name="gui" default="False"/>
+     <arg name="rvizconfig" default="$(find summit_description)/urdf/urdf.rviz"/>
+     <param name="/use_sim_time" value="true"/>
+     <param name="robot_description" command="$(find xacro)/xacro '$(find summit_description)/robot/summit.urdf.xacro' --inorder"/>
+     <param name="publish_frequency" type="double" value="50.0"/>
+     <param name="use_gui" value="$(arg gui)"/>    
+     <node name="joint_state_publisher" pkg="joint_state_publisher"  type="joint_state_publisher"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find
+    summit_description)/urdf/urdf.rviz" />
+    
+</launch>
